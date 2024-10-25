@@ -38,7 +38,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
             const SizedBox(height: 10),
             imagess(),
             const SizedBox(height: 10),
-            button()
+            button(),
           ],
         ),
       ),
