@@ -33,11 +33,11 @@ class _Edit_ScreenState extends State<Edit_Screen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             title_widgets(),
-            const SizedBox(height: 10),
-            subtite_wedgite(),
-            const SizedBox(height: 10),
-            imagess(),
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
+            subtitle_widgets(),
+            const SizedBox(height: 15),
+            images(),
+            const SizedBox(height: 15),
             button(),
           ],
         ),
@@ -75,7 +75,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     );
   }
 
-  Container imagess() {
+  Container images() {
     return Container(
       height: 180,
       child: ListView.builder(
@@ -102,7 +102,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
                 margin: const EdgeInsets.all(8),
                 child: Column(
                   children: [
-                    Image.asset('images/${index}.png'),
+                    Image.asset('images/$index.png'),
                   ],
                 ),
               ),
@@ -148,7 +148,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
     );
   }
 
-  Padding subtite_wedgite() {
+  Padding subtitle_widgets() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Container(
