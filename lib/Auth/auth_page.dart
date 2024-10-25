@@ -3,14 +3,14 @@ import 'package:task_manager/Screen/login_screen.dart';
 
 import '../Screen/signup_screen.dart';
 
-class Auth_Page extends StatefulWidget {
-  Auth_Page({super.key});
+class AuthPage extends StatefulWidget {
+  const AuthPage({super.key});
 
   @override
-  State<Auth_Page> createState() => _Auth_PageState();
+  State<AuthPage> createState() => _AuthPageState();
 }
 
-class _Auth_PageState extends State<Auth_Page> {
+class _AuthPageState extends State<AuthPage> {
   bool a = true;
   void to() {
     setState(() {
