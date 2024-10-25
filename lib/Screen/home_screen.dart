@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
 import '../Const/colors.dart';
 import '../Widgets/stream_note.dart';
 import 'add_note_screen.dart';
@@ -18,13 +17,23 @@ class _Home_ScreenState extends State<Home_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text("Tasks"),
+        backgroundColor: custom_green,
+        leading: const Icon(Icons.menu),
+        actions: const [
+          Icon(Icons.search_sharp),
+          SizedBox(width: 20,)
+        ],
+      ),
       backgroundColor: backgroundColors,
       floatingActionButton: Visibility(
         visible: show,
         child: FloatingActionButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => Add_Screen(),
+              builder: (context) => const Add_Screen(),
             ));
           },
           backgroundColor: custom_green,
@@ -49,11 +58,10 @@ class _Home_ScreenState extends State<Home_Screen> {
           child: Column(
             children: [
               Stream_note(false),
-              Text(
+              const Text(
                 'isDone',
                 style: TextStyle(
                     fontSize: 16,
-                    color: Colors.grey.shade500,
                     fontWeight: FontWeight.bold),
               ),
               Stream_note(true),

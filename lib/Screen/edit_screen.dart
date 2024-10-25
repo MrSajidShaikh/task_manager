@@ -53,24 +53,24 @@ class _Edit_ScreenState extends State<Edit_Screen> {
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: custom_green,
-            minimumSize: Size(170, 48),
+            minimumSize: const Size(170, 48),
           ),
           onPressed: () {
             Firestore_Datasource().Update_Note(
                 widget._note.id, index, title!.text, subtitle!.text);
             Navigator.pop(context);
           },
-          child: Text('add task'),
+          child: const Text('Add Task'),
         ),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.red,
-            minimumSize: Size(170, 48),
+            minimumSize: const Size(170, 48),
           ),
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Cancel'),
+          child: const Text('Cancel'),
         ),
       ],
     );
@@ -100,7 +100,7 @@ class _Edit_ScreenState extends State<Edit_Screen> {
                   ),
                 ),
                 width: 140,
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 child: Column(
                   children: [
                     Image.asset('images/${index}.png'),
@@ -125,14 +125,14 @@ class _Edit_ScreenState extends State<Edit_Screen> {
         child: TextField(
           controller: title,
           focusNode: _focusNode1,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: const TextStyle(fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
               contentPadding:
-              EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               hintText: 'title',
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   color: Color(0xffc5c5c5),
                   width: 2.0,
                 ),
@@ -161,13 +161,13 @@ class _Edit_ScreenState extends State<Edit_Screen> {
           maxLines: 3,
           controller: subtitle,
           focusNode: _focusNode2,
-          style: TextStyle(fontSize: 18, color: Colors.black),
+          style: const TextStyle(fontSize: 18, color: Colors.black),
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             hintText: 'subtitle',
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Color(0xffc5c5c5),
                 width: 2.0,
               ),
