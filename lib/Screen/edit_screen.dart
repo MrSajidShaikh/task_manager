@@ -15,8 +15,8 @@ class _Edit_ScreenState extends State<Edit_Screen> {
   TextEditingController? title;
   TextEditingController? subtitle;
 
-  FocusNode _focusNode1 = FocusNode();
-  FocusNode _focusNode2 = FocusNode();
+  final FocusNode _focusNode1 = FocusNode();
+  final FocusNode _focusNode2 = FocusNode();
   int index = 0;
   @override
   void initState() {
