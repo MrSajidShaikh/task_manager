@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../Const/colors.dart';
 import '../Data/firestore_data.dart';
 import '../Modal/notes_modal.dart';
